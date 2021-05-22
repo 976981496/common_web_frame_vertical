@@ -1,0 +1,25 @@
+# https://editorconfig.org
+#和插件Editorconfig 插件共同使用
+# Eslint 确实包含 .editorconfig 中的一些属性，如缩进等，但并不全部包含，如 .editorconfig 中的 insert_final_newline 属性 Eslint 就没有。Eslint 更偏向于对语法的提示，如定义了一个变量但是没有使用时应该给予提醒。而 .editorconfig 更偏向于代码风格，如缩进等。
+# Eslint 仅仅支持对 js 文件的校验，而 .editorconfig 不光可以检验 js 文件的代码风格，还可以对 .py（python 文件）、.md（markdown 文件）进行代码风格控制。
+# 总结：根据项目需要，Eslint 和 .editorconfig 并不冲突，同时配合使用可以使代码风格更加优雅。
+
+root = true
+
+[*]
+#字符集utf-8
+charset = utf-8
+#缩进风格：空格
+indent_style = space
+#缩进大小2
+indent_size = 2
+#换行符lf
+end_of_line = lf
+#是否在文件的最后插入一个空行
+insert_final_newline = true
+#是否删除行尾的空格
+trim_trailing_whitespace = true
+
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false
